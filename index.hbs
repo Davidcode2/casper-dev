@@ -2,7 +2,7 @@
 {{!-- The tag above means: insert everything in this file
 into the {body} of the default.hbs template --}}
 
-<div class="site-header-content outer{{#match @custom.header_style "Left aligned"}} left-aligned{{/match}}{{#unless @custom.show_publication_cover}}{{#match @custom.header_style "Hidden"}} no-content{{/match}}{{/unless}}">
+<div class="!h-[90vh] site-header-content outer{{#match @custom.header_style "Left aligned"}} left-aligned{{/match}}{{#unless @custom.show_publication_cover}}{{#match @custom.header_style "Hidden"}} no-content{{/match}}{{/unless}}">
 
     {{#if @custom.show_publication_cover}}
         {{#if @site.cover_image}}
@@ -41,14 +41,17 @@ into the {body} of the default.hbs template --}}
       <div class="!p-20 rounded-lg shadow">
         <h2 class="!pt-0 !mt-0">Bürgermeisterliches</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde maiores magnam dicta commodi obcaecati. Vel quod expedita soluta. Reiciendis est ex voluptatum excepturi amet voluptas? Atque deleniti et repellendus corporis.</p>
+        <button class="px-8 py-2 border bg-[var(--ghost-accent-color)] rounded-3xl !mt-4 hover:bg-[var(--ghost-accent-color)]/80 transition">Mehr</button>
       </div>
       <div class="!p-20 rounded-lg shadow">
         <h2 class="!pt-0 !mt-0">Wissenschaft und Publikationen</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde maiores magnam dicta commodi obcaecati. Vel quod expedita soluta. Reiciendis est ex voluptatum excepturi amet voluptas? Atque deleniti et repellendus corporis.</p>
+        <button class="px-8 py-2 border bg-[var(--ghost-accent-color)] rounded-3xl !mt-4 hover:bg-[var(--ghost-accent-color)]/80 transition">Mehr</button>
       </div>
       <div class="!p-20 rounded-lg shadow">
         <h2 class="!pt-0 !mt-0">Medien und Vorträge</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde maiores magnam dicta commodi obcaecati. Vel quod expedita soluta. Reiciendis est ex voluptatum excepturi amet voluptas? Atque deleniti et repellendus corporis.</p>
+        <button class="px-8 py-2 border bg-[var(--ghost-accent-color)] rounded-3xl !mt-4 hover:bg-[var(--ghost-accent-color)]/80 transition">Mehr</button>
       </div>
     </div>
 
