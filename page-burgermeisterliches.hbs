@@ -11,15 +11,14 @@ into the {body} tag of the default.hbs template --}}
 <article class="article {{post_class}}">
 
     {{#match @page.show_title_and_feature_image}}
-        <header class="article-header gh-canvas">
-
-            <h1 class="article-title">{{title}}</h1>
+        <header class="!mb-20">
 
             {{#if feature_image}}
-                <figure class="article-image">
+                <figure class="relative">
                     {{!-- This is a responsive image, it loads different sizes depending on device
                     https://medium.freecodecamp.org/a-guide-to-responsive-images-with-ready-to-use-templates-c400bd65c433 --}}
                     <img
+                        class="w-full"
                         srcset="{{img_url feature_image size="s"}} 300w,
                                 {{img_url feature_image size="m"}} 600w,
                                 {{img_url feature_image size="l"}} 1000w,
@@ -31,6 +30,7 @@ into the {body} tag of the default.hbs template --}}
                     {{#if feature_image_caption}}
                         <figcaption>{{feature_image_caption}}</figcaption>
                     {{/if}}
+                    <h1 class="article-title !p-10 absolute bottom-0 left-10 rounded bg-radial from-white/40 via-white/20 to-transparent">{{title}}</h1>
                 </figure>
             {{/if}}
 
@@ -42,6 +42,26 @@ into the {body} tag of the default.hbs template --}}
     </section>
 
 </article>
+
+<div id="site-main" class="site-main outer">
+  <div class="inner posts">
+
+
+      <div class="post-feed !mb-20 lg:!mb-42">
+        {{!-- Get posts excluding certain tags --}}
+        {{!-- {{#get "posts" filter="tag:fiction+tag:-fables"}} --}}
+
+        {{#get "posts" filter="tag:buergermeister" include="tags,authors" }}
+                {{#foreach posts}}
+                    {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
+                    {{> "post-card"}}
+                {{/foreach}}
+            {{pagination}}
+        {{/get}}
+      </div>
+  </div>
+</div>
+
 </main>
 
 {{/post}}
