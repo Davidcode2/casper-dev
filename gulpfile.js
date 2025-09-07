@@ -47,11 +47,8 @@ function css(done) {
     [
       src("assets/css/*.css", { sourcemaps: true }),
       postcss([
-        easyimport,
-        tailwindcss(),
-        colorFunction(),
-        autoprefixer(),
-        cssnano()
+        easyimport(),
+        tailwindcss()
       ]),
       dest("assets/built/", { sourcemaps: "." }),
       livereload(),
