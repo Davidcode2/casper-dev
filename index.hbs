@@ -2,7 +2,7 @@
 {{!-- The tag above means: insert everything in this file
 into the {body} of the default.hbs template --}}
 
-<div class="!z-40 lg:relative !mb-96 !h-[90vh] site-header-content outer{{#match @custom.header_style "Left aligned"}} left-aligned{{/match}}{{#unless @custom.show_publication_cover}}{{#match @custom.header_style "Hidden"}} no-content{{/match}}{{/unless}}">
+<div class="!z-40 lg:relative !mb-96 lg:!mb-[350px] !h-[90vh] site-header-content outer{{#match @custom.header_style "Left aligned"}} left-aligned{{/match}}{{#unless @custom.show_publication_cover}}{{#match @custom.header_style "Hidden"}} no-content{{/match}}{{/unless}}">
 
     {{#if @custom.show_publication_cover}}
         {{#if @site.cover_image}}
@@ -52,26 +52,55 @@ into the {body} of the default.hbs template --}}
         <a href="/medien-und-vortrage"><button  class="px-8 py-2 border bg-[var(--ghost-accent-color)] rounded-3xl !mt-4 hover:bg-[var(--ghost-accent-color)]/80 transition">Mehr</button></a>
       </div>
     </div>
-
 </div>
 
-    <div class="!z-50 xl:hidden relative -top-120 xl:absolute shadow-xl text-black rounded-2xl xl:-bottom-80 bg-white !m-10 grid xl:grid-cols-3 gap-10">
-      <div class="!p-10">
-        <h2 class="!pt-0 !mt-0">Bürgermeisterliches</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde maiores magnam dicta commodi obcaecati. Vel quod expedita soluta. Reiciendis est ex voluptatum excepturi amet voluptas? Atque deleniti et repellendus corporis.</p>
-        <a href="/burgermeisterliches"><button  class="px-8 py-2 border bg-[var(--ghost-accent-color)] rounded-3xl !mt-4 hover:bg-[var(--ghost-accent-color)]/80 transition">Mehr</button></a>
-      </div>
-      <div class="!p-10">
-        <h2 class="!pt-0 !mt-0">Wissenschaft und Publikationen</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde maiores magnam dicta commodi obcaecati. Vel quod expedita soluta. Reiciendis est ex voluptatum excepturi amet voluptas? Atque deleniti et repellendus corporis.</p>
-        <a href="/wissenschaft-und-publikationen"><button  class="px-8 py-2 border bg-[var(--ghost-accent-color)] rounded-3xl !mt-4 hover:bg-[var(--ghost-accent-color)]/80 transition">Mehr</button></a>
-      </div>
-      <div class="!p-10">
-        <h2 class="!pt-0 !mt-0">Medien und Vorträge</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde maiores magnam dicta commodi obcaecati. Vel quod expedita soluta. Reiciendis est ex voluptatum excepturi amet voluptas? Atque deleniti et repellendus corporis.</p>
-        <a href="/medien-und-vortrage"><button  class="px-8 py-2 border bg-[var(--ghost-accent-color)] rounded-3xl !mt-4 hover:bg-[var(--ghost-accent-color)]/80 transition">Mehr</button></a>
-      </div>
+<div class="!z-50 xl:hidden relative -top-120 xl:absolute shadow-xl text-black rounded-2xl xl:-bottom-80 bg-white !m-10 grid xl:grid-cols-3 gap-10">
+  <div class="!p-10">
+    <h2 class="!pt-0 !mt-0">Bürgermeisterliches</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde maiores magnam dicta commodi obcaecati. Vel quod expedita soluta. Reiciendis est ex voluptatum excepturi amet voluptas? Atque deleniti et repellendus corporis.</p>
+    <a href="/burgermeisterliches"><button  class="px-8 py-2 border bg-[var(--ghost-accent-color)] rounded-3xl !mt-4 hover:bg-[var(--ghost-accent-color)]/80 transition">Mehr</button></a>
+  </div>
+  <div class="!p-10">
+    <h2 class="!pt-0 !mt-0">Wissenschaft und Publikationen</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde maiores magnam dicta commodi obcaecati. Vel quod expedita soluta. Reiciendis est ex voluptatum excepturi amet voluptas? Atque deleniti et repellendus corporis.</p>
+    <a href="/wissenschaft-und-publikationen"><button  class="px-8 py-2 border bg-[var(--ghost-accent-color)] rounded-3xl !mt-4 hover:bg-[var(--ghost-accent-color)]/80 transition">Mehr</button></a>
+  </div>
+  <div class="!p-10">
+    <h2 class="!pt-0 !mt-0">Medien und Vorträge</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde maiores magnam dicta commodi obcaecati. Vel quod expedita soluta. Reiciendis est ex voluptatum excepturi amet voluptas? Atque deleniti et repellendus corporis.</p>
+    <a href="/medien-und-vortrage"><button  class="px-8 py-2 border bg-[var(--ghost-accent-color)] rounded-3xl !mt-4 hover:bg-[var(--ghost-accent-color)]/80 transition">Mehr</button></a>
+  </div>
+</div>
+
+<section class="!mb-[280px] px-4 py-12 bg-white rounded-2xl">
+  <div class="lg:w-2/3 !py-42 !pb-[250px] !mx-auto">
+    <div class="flex !px-6">
+      <span class="content-center !text-8xl font-serif text-gray-400 !mr-8 leading-none">„</span>
+        <blockquote class="flex text-center items-center justify-center !italic !text-4xl/20 lg:!text-6xl/20 text-gray-700 !mb-0 !p-0">
+          <span>Führung ist das Privileg, den Menschen zu dienen und&nbsp;nicht das Recht, über sie zu herrschen</span>
+        </blockquote>
+      <span class="content-center !ml-8 !text-8xl font-serif text-gray-400 ml-4 leading-none">“</span>
     </div>
+    <div class="!mt-6 text-center text-gray-400">Dr. Joy A. Alemazung</div>
+
+</div>
+  <div class="mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+    <!-- Left column: Image placeholder -->
+    <div class="w-full bg-gray-200 rounded-lg flex items-center justify-center">
+      <!-- Replace src below with your image -->
+      <img src="./assets/images/alemazung_family.jpg" alt="Portrait" class="object-cover w-full h-full rounded-lg" />
+    </div>
+    <!-- Right column: Content -->
+    <div>
+      <ul class="space-y-2 text-gray-800">
+        <li>Geboren in Schwäbisch Gmünd mit kamerunischen Wurzeln, Jahrgang 1974</li>
+        <li>Verheiratet, stolzer Vater von drei Kindern</li>
+        <li>Wohnhaft in Lindach</li>
+        <li>Promovierter Sozialwissenschaftler und Referent im höheren Dienst beim Bundesministerium für wirtschaftliche Zusammenarbeit und Entwicklung</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
 {{!-- The main content area --}}
 <main id="site-main" class="site-main outer">
