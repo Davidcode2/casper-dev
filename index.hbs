@@ -2,7 +2,7 @@
 {{!-- The tag above means: insert everything in this file
 into the {body} of the default.hbs template --}}
 
-<div class="!z-40 lg:relative lg:!mb-96 !h-[90vh] site-header-content outer{{#match @custom.header_style "Left aligned"}} left-aligned{{/match}}{{#unless @custom.show_publication_cover}}{{#match @custom.header_style "Hidden"}} no-content{{/match}}{{/unless}}">
+<div class="!z-40 lg:relative !mb-96 !h-[90vh] site-header-content outer{{#match @custom.header_style "Left aligned"}} left-aligned{{/match}}{{#unless @custom.show_publication_cover}}{{#match @custom.header_style "Hidden"}} no-content{{/match}}{{/unless}}">
 
     {{#if @custom.show_publication_cover}}
         {{#if @site.cover_image}}
@@ -21,7 +21,7 @@ into the {body} of the default.hbs template --}}
     {{/if}}
 
     {{#match @custom.header_style "!=" "Hidden"}}
-        <div class="site-header-inner !mb-30 lg:!mb-96 inner">
+        <div class="site-header-inner !mb-30 xl:!mb-96 inner">
             {{#match @custom.navigation_layout "Logo on cover"}}
                 {{#if @site.logo}}
                     <img class="site-logo" src="{{@site.logo}}" alt="{{@site.title}}">
@@ -35,7 +35,7 @@ into the {body} of the default.hbs template --}}
         </div>
     {{/match}}
 
-    <div class="hidden lg:absolute shadow-xl text-black rounded-2xl lg:-bottom-80 bg-white !m-20 lg:grid xl:grid-cols-3 gap-10">
+    <div class="hidden relative xl:absolute lg:shadow-xl text-black rounded-2xl xl:-bottom-80 bg-white !m-20 xl:grid xl:grid-cols-3 gap-10">
       <div class="!p-20">
         <h2 class="!pt-0 !mt-0">Bürgermeisterliches</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde maiores magnam dicta commodi obcaecati. Vel quod expedita soluta. Reiciendis est ex voluptatum excepturi amet voluptas? Atque deleniti et repellendus corporis.</p>
@@ -55,24 +55,23 @@ into the {body} of the default.hbs template --}}
 
 </div>
 
-    <div class="lg:hidden shadow relative bottom-40 text-black rounded-2xl lg:-bottom-80 !z-50 !bg-white !m-20 lg:grid xl:grid-cols-3 gap-10">
-      <div class="!p-20">
+    <div class="!z-50 xl:hidden relative -top-120 xl:absolute shadow-xl text-black rounded-2xl xl:-bottom-80 bg-white !m-10 grid xl:grid-cols-3 gap-10">
+      <div class="!p-10">
         <h2 class="!pt-0 !mt-0">Bürgermeisterliches</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde maiores magnam dicta commodi obcaecati. Vel quod expedita soluta. Reiciendis est ex voluptatum excepturi amet voluptas? Atque deleniti et repellendus corporis.</p>
         <button class="px-8 py-2 border bg-[var(--ghost-accent-color)] rounded-3xl !mt-4 hover:bg-[var(--ghost-accent-color)]/80 transition">Mehr</button>
       </div>
-      <div class="!p-20">
+      <div class="!p-10">
         <h2 class="!pt-0 !mt-0">Wissenschaft und Publikationen</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde maiores magnam dicta commodi obcaecati. Vel quod expedita soluta. Reiciendis est ex voluptatum excepturi amet voluptas? Atque deleniti et repellendus corporis.</p>
         <button class="px-8 py-2 border bg-[var(--ghost-accent-color)] rounded-3xl !mt-4 hover:bg-[var(--ghost-accent-color)]/80 transition">Mehr</button>
       </div>
-      <div class="!p-20">
+      <div class="!p-10">
         <h2 class="!pt-0 !mt-0">Medien und Vorträge</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde maiores magnam dicta commodi obcaecati. Vel quod expedita soluta. Reiciendis est ex voluptatum excepturi amet voluptas? Atque deleniti et repellendus corporis.</p>
         <button class="px-8 py-2 border bg-[var(--ghost-accent-color)] rounded-3xl !mt-4 hover:bg-[var(--ghost-accent-color)]/80 transition">Mehr</button>
       </div>
     </div>
-
 
 {{!-- The main content area --}}
 <main id="site-main" class="site-main outer">
