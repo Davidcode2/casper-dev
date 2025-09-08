@@ -449,6 +449,7 @@ production stylesheet in assets/built/screen.css
 .gh-head-menu .nav {
     display: inline-flex;
     align-items: center;
+    text-align: center;
     flex-wrap: wrap;
     gap: 32px;
     list-style: none;
