@@ -52,108 +52,34 @@ into the {body} of the default.hbs template }}
   {{> "header-entry-menu" }}
 </div>
 
-<section class="!mb-[280px] px-4 bg-white rounded-2xl">
-  <div class="lg:w-2/3 lg:!py-42 !pb-[280px] lg:!pb-[300px] !mx-auto">
-    <div class="flex !px-6">
-      <span
-        class="content-center !text-8xl font-serif text-gray-400 !mr-8 leading-none"
-      >„</span>
-      <blockquote
-        class="flex text-center items-center justify-center !italic !text-4xl/20 lg:!text-6xl/20 text-gray-700 !my-0 !p-0"
-      >
-        <span>Führung ist das Privileg, den Menschen zu dienen und&nbsp;nicht
-          das Recht, über sie zu herrschen</span>
-      </blockquote>
-      <span
-        class="content-center !ml-8 !text-8xl font-serif text-gray-400 ml-4 leading-none"
-      >“</span>
-    </div>
-    <div class="!mt-6 text-center text-gray-400">Dr. Joy A. Alemazung</div>
+<div class="opacity-20 xl:hidden relative bottom-60 flex justify-center">
+  <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-slash-icon lucide-slash"><path d="M22 2 2 22"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-slash-icon lucide-slash"><path d="M22 2 2 22"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-slash-icon lucide-slash"><path d="M22 2 2 22"/></svg>
+</div>
 
-  </div>
-  <div class="mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-    <!-- Left column: Image placeholder -->
-    <div class="w-full bg-gray-200 rounded-lg flex items-center justify-center">
-      <!-- Replace src below with your image -->
-      <img
-        src="./assets/images/alemazung_family.jpg"
-        alt="Portrait"
-        class="object-cover w-full h-full rounded-lg"
-      />
+<div class="bg-gradient-to-br from-white-50 via-white to-gray-100 !pb-40 lg:!pt-40">
+  <div class="flex flex-col xl:grid xl:grid-cols-[60%_40%] lg:gap-x-10 !mx-10 lg:!mx-90">
+    <div class="order-2 xl:order-1 !z-30">
+      {{> "description-text" }}
     </div>
-    <!-- Right column: Content -->
-    <ul class="text-gray-800 flex justify-center h-full flex-col">
-      <li class="!border-b !border-gray-200 !py-10 !my-0 flex gap-x-4">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="lucide lucide-asterisk-icon lucide-asterisk"
-        ><path d="M12 6v12" /><path d="M17.196 9 6.804 15" /><path
-            d="m6.804 9 10.392 6"
-          /></svg>
-        Geboren in Schwäbisch Gmünd mit kamerunischen Wurzeln, Jahrgang 1974
-      </li>
-      <li class="!border-b !border-gray-200 !py-10 !my-0 flex gap-x-4">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="lucide lucide-blend-icon lucide-blend"
-        ><circle cx="9" cy="9" r="7" /><circle cx="15" cy="15" r="7" /></svg>
-        Verheiratet, stolzer Vater von drei Kindern
-      </li>
-      <li class="!border-b !border-gray-200 !py-10 !my-0 flex gap-x-4">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="lucide lucide-house-icon lucide-house"
-        ><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8" /><path
-            d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"
-          /></svg>
-        Wohnhaft in Lindach
-      </li>
-      <li class="!py-10 !my-0 grid grid-cols-[auto_1fr] gap-x-4">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="lucide lucide-school-icon lucide-school"
-        ><path d="M14 21v-3a2 2 0 0 0-4 0v3" /><path d="M18 5v16" /><path
-            d="m4 6 7.106-3.79a2 2 0 0 1 1.788 0L20 6"
-          /><path
-            d="m6 11-3.52 2.147a1 1 0 0 0-.48.854V19a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-5a1 1 0 0 0-.48-.853L18 11"
-          /><path d="M6 5v16" /><circle cx="12" cy="9" r="2" /></svg>
-        Promovierter Sozialwissenschaftler und Referent im höheren Dienst beim
-        Bundesministerium für wirtschaftliche Zusammenarbeit und Entwicklung
-      </li>
-    </ul>
+    <div class="!pb-20 xl:!pb-0 order-1 xl:order-2 !z-10 opacity-20 !font-extrabold !text-7xl lg:!text-9xl text-[var(--ghost-accent-color)]">
+      <div class="xl:rotate-90">
+        Lokale Verantwortung mit globaler Perspektive
+      </div>
+    </div>
+    {{!-- <image src="./assets/images/heubach_rosenstein_alemazung_fade_out.png" alt="He for She Logo" class=""/> --}}
   </div>
+
+  <div class="!pt-60 flex justify-center gap-x-20">
+    <image src="./assets/images/cdu_logo.svg" alt="CDU Logo" class="w-40 lg:w-80"/>
+    <image src="./assets/images/he_for_she_logo.svg" alt="He for She Logo" class="w-40 lg:w-80"/>
+  </div>
+</div>
+
+<section class="!mb-[280px] !mt-90 px-4 bg-white rounded-2xl">
+  {{> "quote-leadership" }}
+  {{> "family-vita" }}
 </section>
 
 
